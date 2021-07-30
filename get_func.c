@@ -14,6 +14,15 @@ int (*get_func(char x))(va_list)
 		{"%", print_percent},
 		{"d", print_d},
 		{"i", print_i},
+		{'b', print_binary},
+		{'u', print_unsigned},
+		{'o', print_oct},
+		{'x', print_hex},
+		{'X', print_HEX},
+		{'S', print_S},
+		{'R', print_rot13},
+		{'p', print_hex},
+		{'r', print_rev},
 		{NULL, NULL}
 	};
 	while (arr[i].valid)
@@ -22,5 +31,5 @@ int (*get_func(char x))(va_list)
 			return (arr[i].f);
 		i++;
 	}
-	return (NULL);
+	return (arr[i].f);
 }

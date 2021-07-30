@@ -1,4 +1,8 @@
-Requirements
+This is an alx team project on printf by Irene Busah AFR-0621 and Knightess Oyibo AFR-0621
+
+The project consists of 3 mandatory task and 14 advanced tasks
+
+REQUIREMENTS
 
 General
 
@@ -25,3 +29,8 @@ General
 11.All your header files should be include guarded
 
 12.Note that we will not provide the _putchar function for this project
+
+COMPILATION
+The code will be compiled using:
+
+$ gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c
