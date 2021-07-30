@@ -1,0 +1,93 @@
+.\" printf man page
+.\"
+.\"
+
+.SH man 3 "27 july 2021" "0.01" "_printf man page"
+
+.SH NAME
+.printf.c.
+- A re-creation of the printf function
+
+.SH SYNOPSIS
+
+To use this function the holberton.h header file containing the various prototypes was created is needed.
+
+a format.c file containing the functions for the conversion specifiers was also created.
+
+.SH DESCRIPTION
+The _printf() function produces output according to a format which is described
+below. This function write its output to the stdout, the standard output stream
+
+.SH prototype
+int _printf(const char *format, ...);
+
+format is a character string. The format string is composed of zero or more directive.
+while ...refers to a list of variadic variables of any type.
+
+.SH CONVERSION SPECIFIERS
+
+The arguments used are handled by conversion specifiers as listed below:
+
+.IT
+.B c
+- The integer or char argument converts to an unsigned char, and the resulting character is written. The conversion specifier %c is used. 
+
+.IT
+.B s
+- The argument shall be a literal string. No special provisions are made for multibyte characters.The behavior of printf with the s conversion specifier is undefined if the argument value is not a pointer to a literal string. Characters from the literal string array are written up to, but not including,the terminating null byte ('\0'). the conversion specifier %s is used.
+
+.IT
+.B %
+- A % character is written and no argument is converted. The complete conversion specification is '%%'.
+
+.IT
+.B b
+- The unsigned int argument is converted to binary.
+
+.IT
+.B d, i
+- The int argument is converted to signed decimal notation.
+
+.IT
+.B p
+- The pointer is printed in hexidecimal format preceded by '0x'.
+
+.IT
+.B r, R
+- 'r' prints string in reverse. 'R' prints encrypted rot13.
+
+.IT
+
+.B o, u, x, X
+- The unsigned int argument is converted to unsigned octal (o), unsigned decimal (u), or unsigned hexidecimal notation (x or X); the letters abcdef are used for x conversion and the letters ABCDEF for X conversion.
+
+.IT
+.B S
+- Prints ascii characters #32 - #127 as they appear in the argument string. All other ascii characters are converted to hexidecimal, then written to \
+standard output.
+
+.SH RETURN VALUES
+The _printf() function returns the number of characters printed (excluding the null byte used to end output to strings.
+
+SH. AUTHORIZED FUNCTIONS AND MACROS
+write (man 2 write)
+malloc (man 3 malloc)
+free (man 3 free)
+va_start (man 3 va_start)
+va_end (man 3 va_end)
+va_copy (man 3 va_copy)
+va_arg (man 3 va_arg)
+
+.SH COMPILE
+The program is compiled using: 
+$ gcc -Wall -Werror -Wextra -pedantic *.c
+
+.SH SEE ALSO
+.man 3 printf
+
+.SH BUGS
+No known bugs.
+
+.SH AUTHORS
+knightess Oyibo
+Irene Busah
