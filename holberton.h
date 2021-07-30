@@ -1,5 +1,6 @@
-#ifndef our_printf
-#define our_printf
+#ifndef HOLBERTON_H
+#define HOLBERTON_H
+
 #include <stdio.h>
 #include <stdarg.h>
 /**
@@ -21,4 +22,5 @@ int print_i(va_list args);
 int _putchar(char c);
 int print_percent(va_list args);
 int (*get_func(char x))(va_list args);
-#endif
+
+#endif /*HOLBERTON_H*/
